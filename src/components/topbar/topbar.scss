@@ -128,3 +128,54 @@
     }
   }
 }  
+@media (max-width: 1024px) { /* iPad and smaller */
+  .topbar {
+    justify-content: flex-start;
+    padding: 0 25px;
+
+    .topbar-left,
+    .topbar-right {
+      display: none;
+    }
+
+    .topbar-center {
+      margin-left: 35px; /* was 40px — slightly less push */
+      margin-bottom: 30px;
+      justify-content: flex-start;
+
+      .search-box {
+        width: 60%; /* was 40% — gives more natural scale */
+        max-width: 320px; /* tighter */
+        height: 38px; /* ensures consistent size */
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) { /* mobile */
+  .topbar {
+    height: 70px; /* slightly smaller */
+    padding: 0 15px;
+
+    .topbar-center {
+      margin-left: 50px; /* smaller shift */
+      justify-content: flex-start;
+      margin-bottom: 8px;
+
+      .search-box {
+        width: 85%;
+        max-width: 240px;
+        height: 34px;
+
+        .search-input {
+          font-size: 12.5px; /* slightly smaller text */
+          padding: 6px 8px;
+        }
+
+        .search-icon {
+          width: 38px; /* smaller icon to balance input */
+        }
+      }
+    }
+  }
+}
