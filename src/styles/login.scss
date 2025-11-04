@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  font-family: "Avenir Next", sans-serif;
+
+  .login-left {
+    flex: 1;
+    padding: 100px 70px;
+    display: flex;
+    flex-direction: column;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 100px;
+
+      .logo-icon {
+        width: 25px;
+        height: 25px;
+      }
+
+      .logo-text {
+        font-size: 36px;
+        font-weight: 700;
+        color: #213f7d;
+      }
+    }
+
+    .illustration {
+      width: 600px;
+      height: auto;
+    }
+  }
+
+  .login-right {
+    width: 704px;
+    border: 2px solid #545f7d10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+
+    .welcome {
+      font-size: 40px;
+      font-weight: 700;
+      color: #213f7d;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #545f7d;
+      margin-bottom: 40px;
+    }
+
+.login-form {
+  .input-group {
+    position: relative;
+    width: 100%;
+    max-width: 447px;
+    margin-bottom: 25px;
+
+    input {
+      width: 100%;
+      height: 50px;
+      border: 2px solid #545f7d26;
+      border-radius: 5px;
+      padding: 0 60px 0 15px; // space for "SHOW" on the right
+      font-size: 14px;
+      color: #545f7d;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    &.password {
+      .show-btn {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 12px;
+        font-weight: 600;
+        color: #39cdcc;
+        cursor: pointer;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        padding: 0;
+        line-height: 1;
+      }
+    }
+  }
+
+
+      .forgot {
+        font-size: 12px;
+        font-weight: 600;
+        color: #39cdcc;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .login-btn {
+        width: 100%;
+        max-width: 447px;
+        height: 48px;
+        background-color: #39cdcc;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .login-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 40px 20px;
+
+    .login-left {
+      align-items: center;
+      text-align: center;
+      padding: 0;
+
+      .illustration {
+        max-width: 90%;
+      }
+    }
+
+    .login-right {
+      width: 100%;
+      border: none;
+      padding: 40px 20px;
+
+      .login-form {
+        .input-group input,
+        .login-btn {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login-left .logo-text {
+    font-size: 28px;
+  }
+
+  .input-group input {
+      width: 100%;
+      max-width: none;
+    }
+
+  .login-right {
+    .welcome {
+      font-size: 32px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+}

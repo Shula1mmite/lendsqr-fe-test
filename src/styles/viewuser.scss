@@ -1,0 +1,318 @@
+/* ========================================
+   ROOT & LAYOUT
+======================================== */
+.viewuser-wrapper {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.viewuser-content {
+  flex: 1;
+  padding: 50px 40px 40px 40px;
+  background: #fafafa;
+}
+
+/* ========================================
+   BACK TO USERS
+======================================== */
+.back-to-users {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #545F7D;
+
+  svg { width: 30px; height: 30px; }
+}
+
+/* ========================================
+   HEADER
+======================================== */
+.user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 20px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #213F7D;
+    margin: 0;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 16px;
+
+    button {
+      width: 170px;
+      height: 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .blacklist {
+      border: 1px solid #E4033B;
+      background: transparent;
+      color: #E4033B;
+    }
+
+    .activate {
+      border: 1px solid #39CDCC;
+      background: transparent;
+      color: #213F7D;
+    }
+  }
+}
+
+/* ========================================
+   WHITE CONTAINER (Profile + Tabs)
+======================================== */
+.profile-container {
+  background: #ffffff;
+  border: 1px solid #213F7D0F;
+  border-radius: 4px;
+  min-width: 1277px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+}
+
+/* ───── PROFILE CARD (GRID) ───── */
+.user-info-card {
+  display: grid;
+  grid-template-columns: max-content 1px max-content 1px max-content;
+  align-items: center;
+  padding: 24px 40px;
+  column-gap: 28px;
+  row-gap: 12px;
+}
+
+/* LEFT-ALIGN ALL BLOCKS */
+.user-basic,
+.user-tier,
+.user-account {
+  justify-self: start;
+}
+
+/* Avatar + Name */
+.user-basic {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-basic .avatar svg { width: 100px; height: 100px; }
+.user-name h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  color: #213F7D;
+}
+.user-name p {
+  margin: 8px 0 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #545F7D;
+}
+
+/* Divider */
+.divider {
+  width: 1px;
+  height: 80px;
+  background: rgba(84,95,125,0.2);
+}
+
+/* Tier */
+.user-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.user-tier span {
+  font-weight: 500;
+  font-size: 14px;
+  color: #545F7D;
+  margin-bottom: 10px;
+}
+.user-tier .stars {
+  display: flex;
+  gap: 8px;
+}
+.user-tier .stars svg { width: 16px; height: 16px; }
+
+/* Balance */
+.user-account {
+  text-align: left;
+}
+.user-account h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  color: #213F7D;
+}
+.user-account p {
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #213F7D;
+}
+
+/* ───── TABS ───── */
+.user-tabs {
+  display: flex;
+  border-top: none; /* ← NO DIVIDER */
+}
+.user-tabs .tab {
+  flex: 1;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000cc;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+.user-tabs .tab.active {
+  color: #39CDCC;
+  font-weight: 500;
+}
+.user-tabs .tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #39CDCC;
+}
+
+/* ========================================
+   GENERAL DETAILS
+======================================== */
+.details-content {
+  max-width: 2037px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.info-block {
+  margin-bottom: 48px;
+}
+.block-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #213f7d;
+  margin: 0 0 20px;
+  padding: 40px 0 10px;
+  border-top: 1px solid #e5e5e5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px 24px;
+}
+.info-item label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #545f7d;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.info-item p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #213f7d;
+  line-height: 1.5;
+}
+
+/* ========================================
+   RESPONSIVE: MOBILE & TABLET
+======================================== */
+@media (max-width: 992px) {
+  .viewuser-content { padding: 40px 20px; }
+
+  .user-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .action-buttons {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .action-buttons button { width: 140px; }
+
+  .user-info-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
+  }
+  .divider { display: none; }
+
+  .user-tabs {
+    flex-wrap: wrap;
+  }
+  .user-tabs .tab {
+    flex: 1 1 50%;
+    font-size: 15px;
+    padding: 14px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .viewuser-content { padding: 30px 16px; }
+
+  .back-to-users { font-size: 14px; gap: 8px; }
+  .back-to-users svg { width: 24px; height: 24px; }
+
+  .user-header h2 { font-size: 20px; }
+
+  .user-info-card {
+    padding: 16px;
+  }
+  .user-basic { gap: 12px; }
+  .user-name h3 { font-size: 18px; }
+  .user-name p { font-size: 12px; }
+  .user-account h3 { font-size: 18px; }
+  .user-account p { font-size: 11px; }
+  .user-tier span { font-size: 13px; }
+
+  .details-content { padding: 24px 16px; }
+  .info-grid { grid-template-columns: 1fr; gap: 24px; }
+  .block-title { font-size: 16px; padding-top: 32px; }
+}
+
+@media (max-width: 480px) {
+  .user-tabs .tab {
+    flex: 1 1 100%;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   LARGE SCREENS (Optional Enhancement)
+======================================== */
+@media (min-width: 1440px) {
+  .profile-container { max-width: 1180px; }
+  .user-info-card { padding: 32px 48px; column-gap: 36px; }
+  .user-name h3, .user-account h3 { font-size: 24px; }
+  .user-name p, .user-account p, .user-tier span { font-size: 15px; }
+}
