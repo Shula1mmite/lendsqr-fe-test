@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+"scripts": {
   "dev": "vite",
   "build": "vite build --force",
-  "preview": "vite preview"
+  "preview": "vite preview",
+  "postinstall": "vite build --force"
 },
+
 
   "keywords": [],
   "author": "",
